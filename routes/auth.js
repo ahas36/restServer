@@ -19,7 +19,7 @@ var auth = {
         // Fire a query to your DB and check if the credentials are valid
 
         var val=auth.validate(username, password, function (dbUserObj) {
-            if (!dbUserObj || dbUserObj.length===0) { // If authentication fails, we send a 401 back
+            if (!dbUserObj && dbUserObj.length===0) { // If authentication fails, we send a 401 back
                 res.status(401);
                 res.json({
                     "status": 401,

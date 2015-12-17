@@ -2,11 +2,10 @@
   "name": "MyM8Rest",
   "version": "0.1.0",
   "description": "MyM8RestApp",
-
-  "scripts": {
-    "start": "node server.js"
-  },
   "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "author": "Alireza Hassani",
   "license": "Ahas",
   "dependencies": {
@@ -15,5 +14,8 @@
     "jwt-simple": "^0.2.0",
     "morgan": "^1.3.1",
     "mysql": "^2.5.4"
+  },
+  "engines" : {
+    "node": "0.10.x"
   }
 }
