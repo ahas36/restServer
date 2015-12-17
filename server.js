@@ -40,10 +40,14 @@ app.use(function(req, res, next) {
 });
 
 // Start the server
-app.set('port', process.env.PORT || 3000);
 
-var server = app.listen(app.get('port'), function() {
-    console.log('Express server listening on port ' + server.address().port);
+var server_ip_address = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1'
+
+
+app.set('port', process.env.OPENSHIFT_NODEJS_PORT || 8080);
+
+var server = app.listen(app.get('port'), server_ip_address,function() {
+    console.log("Listening on " + server_ip_address + ", server_port "+ server.address().port);
 });
 
 
