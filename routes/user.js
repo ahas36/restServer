@@ -19,17 +19,25 @@ var users = {
         dbManager("SELECT * FROM user where user_name='"+user+"' and password='"+pass+"'",res,true,callback);
 
     },
+    validateUserId: function(req, res,callback)
+    {
+
+        var id = req;
+        dbManager("SELECT * FROM user where user_id="+id,res,true,callback);
+        res;
+    }
+    ,
     getByUserName: function(req, res)
     {
-        var id = req.params.username;
-        dbManager("SELECT * FROM user where user_name="+id,res,true);
+        var username = req.params.username;
+        dbManager("SELECT * FROM user where user_name='"+username+"'",res,true);
         res;
     }
     ,
 
     create: function(req, res) {
         var newUser = req.body;
-        var sql="insert into user (user_name,password) values('"+newUser.username+"','"+newUser.password+")";
+        var sql="insert into user (user_name,password) values('"+newUser.email+"','"+newUser.password+"')";
         dbManager(sql,res,true);
         res;
     },

@@ -5,11 +5,11 @@ var mysql     =    require('mysql');
 //SET UP MySql
 var pool      =    mysql.createPool({
     connectionLimit : 100, //important
-    host     : 'localhost',
-    user     : 'root',
-    password : 'admin',
-    database : 'mym8',
-    debug    :  true
+    host     : 'localhost',//'sql6.freemysqlhosting.net',
+    user     : 'root',//'sql6100189',
+    password : 'admin',//'JqLiS3KDNi',
+    database : 'mym8',//'sql6100189',
+    debug    :  false
 });
 
 function handle_database(req,res,type,callback) {
