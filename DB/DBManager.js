@@ -5,9 +5,9 @@ var mysql     =    require('mysql');
 //SET UP MySql
 var pool      =    mysql.createPool({
     connectionLimit : 100, //important
-    host     : 'localhost',//'sql6.freemysqlhosting.net',
-    user     : 'root',//'sql6100189',
-    password : 'admin',//'JqLiS3KDNi',
+    host     : '127.2.209.2:3306',//'sql6.freemysqlhosting.net',
+    user     : 'admin2zytyw2',//'sql6100189',
+    password : 'ZIvT7pANHH1F',//'JqLiS3KDNi',
     database : 'mym8',//'sql6100189',
     debug    :  false
 });
